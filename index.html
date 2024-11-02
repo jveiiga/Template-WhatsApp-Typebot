@@ -1,0 +1,379 @@
+
+<!-- Facebook Pixel Code -->
+<script>
+   !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '0000000000');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent');
+ 
+</script>
+<!-- End Facebook Pixel Code -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+
+$('.downBottom').on('click', function() {
+  $('html').animate({
+    scrollTop: $(document).height()
+  }, 1000);
+});
+
+$(window).on('scroll', function(){
+  let s = $(window).scrollTop(),
+      d = $(document).height(),
+      c = $(window).height();
+
+  let scrollPercent = (s / (d - c)) * 100;
+  var text = window.location.href;
+
+  if(scrollPercent <= 90){
+    $('.downBottom').fadeIn(500);
+  }
+  else{
+    $('.downBottom').fadeOut(500);
+  }        
+});
+
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+<script src="https://kit.fontawesome.com/0a6d712850.js" crossorigin="anonymous"></script>
+
+<style>
+  .hide {
+    display: none!important;
+  }
+  typebot-standard {
+    position: relative;
+    z-index: 9999;
+  }
+  #__next {
+    position: relative;
+    z-index: 9999;
+}
+  /* User Bar */
+.user-bar {
+  width: 100%;
+  height: 55px;
+  background: #005e54;
+  color: #fff;
+  padding: 0;
+  font-size: 24px;
+  position: fixed;
+  z-index: 99999;
+  display: block;
+  top: 0;
+}
+
+.user-bar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.user-bar div {
+    float: left;
+    transform: translateY(-50%);
+    position: relative;
+    top: 50%;
+    margin-left: 10px;
+}
+
+.user-bar .actions {
+  float: right;
+  margin: 0 0 0 10px;
+}
+
+.user-bar .actions.more {
+  margin: 0 12px 0 25px;
+}
+
+.user-bar .actions.attachment {
+  margin: 0 0 0 25px;
+}
+
+.user-bar .actions.attachment i {
+  display: block;
+  transform: rotate(-45deg);
+}
+
+.user-bar .avatar {
+  margin: 0 0 0 5px;
+  width: 36px;
+  height: 36px;
+}
+
+.user-bar .avatar img {
+  border-radius: 50%;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-bar .name {
+  font-size: 17px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  letter-spacing: 0.3px;
+  margin: 0 0 0 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 205px;
+}
+
+.user-bar .status {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.verificado {
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 4px;
+}
+
+  /* Botão do input */
+.typebot-input .typebot-button {
+  content: "";
+  background: rgba(0, 138, 134, 1);
+  border-radius: 50%; 
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; 
+  height: 50px; 
+  border: none;
+  font-size: 0px;
+  color: transparent;
+}
+
+.typebot-input .typebot-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="19px"><path d="M476.59 227.05l-.16-.07L49.35 49.84A23.56 23.56 0 0027.14 52 24.65 24.65 0 0016 72.59v113.29a24 24 0 0019.52 23.57l232.93 43.07a4 4 0 010 7.86L35.53 303.45A24 24 0 0016 327v113.31A23.57 23.57 0 0026.59 460a23.94 23.94 0 0013.22 4 24.55 24.55 0 009.52-1.93L476.4 285.94l.19-.09a32 32 0 000-58.8z" fill="white"/></svg>');
+}
+
+
+/* Oculta o ícone anterior*/
+.typebot-input .typebot-button .send-icon {
+  display: none; 
+}
+
+/* Estilo da caixa do input */
+.typebot-input {
+    max-width: 100%!important;
+    width:100%!important;
+    position: fixed;
+    bottom: 0;
+    align-items: center;
+    z-index: 999;
+    right: 0;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 1 2px 1px -1px rgba(0,0,0,.2);
+    height: 50px;
+    padding-right: 0px!important;
+}
+
+.downBottom {
+    position: fixed;
+    z-index: 99998;
+    text-align: center;
+    width: 50px;
+    bottom: 60px;
+    right: 0;
+    color: #29afdf;
+    background-color: #f4f4f7;
+    margin: 0 auto;
+    border-radius: 10px 0 0 10px;
+    font-size: 20px;
+    font-weight: 800;
+    box-shadow: 0px 0px 2px 1px #c6beb7;
+    padding: 2px 2px 5px 2px;
+    display: none;
+}
+
+/* Corrigir cor do botão */
+.disabled\:opacity-50:disabled {
+    opacity: 100%;
+}
+
+.back a {
+    color: white;
+}
+
+.actions a {
+    color: white;
+}
+
+</style>
+<script>
+try {
+  
+function criarBarra() {
+  var userBar = document.createElement("div");
+  userBar.className = "user-bar";
+
+  var backButton = document.createElement("div");
+  backButton.className = "back";
+  backButton.innerHTML = '<a href="https://lastlink.com/p/CC3803210/checkout-payment"><i class="fa-solid fa-chevron-left"></i></a>';
+
+  var avatar = document.createElement("div");
+  avatar.className = "avatar";
+  avatar.innerHTML = '<img src="https://drive.google.com/file/d/1YLny03IXsX18WZpKXkCZ7suZWw4xxQBM/view?usp=drive_link" alt="Dra Carla">';
+
+  var name = document.createElement("div");
+  name.className = "name";
+  name.innerHTML = '<span>Fulano</span><span class="verificado" data-testid="psa-verified" data-icon="psa-verified" class=""><svg viewBox="0 0 18 18" height="18" width="18" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 18 18" xml:space="preserve"><polygon id="Star-2" fill="#00DA60" points="9,16 7.1,16.9 5.8,15.2 3.7,15.1 3.4,13 1.5,12 2.2,9.9 1.1,8.2 2.6,6.7 2.4,4.6 4.5,4 5.3,2 7.4,2.4 9,1.1 10.7,2.4 12.7,2 13.6,4 15.6,4.6 15.5,6.7 17,8.2 15.9,9.9 16.5,12 14.7,13 14.3,15.1 12.2,15.2 10.9,16.9 "></polygon><polygon id="Check-Icon" fill="#FFFFFF" points="13.1,7.3 12.2,6.5 8.1,10.6 5.9,8.5 5,9.4 8,12.4 "></polygon></svg></span><span class="status">online</span>';
+
+  var moreActions = document.createElement("div");
+  moreActions.className = "actions more";
+  moreActions.innerHTML = '<i class="zmdi zmdi-more-vert"></i>';
+
+  userBar.appendChild(backButton);
+  userBar.appendChild(avatar);
+  userBar.appendChild(name);
+  userBar.appendChild(moreActions);
+
+
+  var bottomDown = document.createElement("botton");
+  bottomDown.className = "downBottom";
+  bottomDown.innerHTML = '<i class="fa-solid fa-circle-chevron-down"></i>';
+
+  var elementoPai = document.querySelector("#__next");
+  if (elementoPai) {
+      elementoPai.insertBefore(bottomDown, elementoPai.firstChild);
+    elementoPai.insertBefore(userBar, elementoPai.firstChild);
+
+  }
+}
+
+criarBarra();
+
+} catch (e) {
+  console.warn(e); 
+}
+</script>
+<script>
+try {
+  
+  
+  const botBody = document.querySelector('typebot-standard')
+        .shadowRoot.querySelector('.typebot-container');
+  const userAvatar = botBody.querySelector('img[elementtiming="Bot avatar"]');
+  const status = document.querySelector('.status');
+  
+  const audioNot = document.createElement('audio');
+  audioNot.src = 'https://s3.fr-par.scw.cloud/typebot/public/typebots/rx0zcrlqkhifqajxuzr6txa9/blocks/ttfglhs9oks32ebn2ymqcrp1?v=1690899194685';
+  let mensagesLength = 0;
+  
+  let respostaLength = 0;
+
+
+  createInfoMessage();  
+  
+  function createInfoMessage() {
+    
+    const botBody = document.querySelector('typebot-standard')
+        .shadowRoot.querySelector('.typebot-container');
+    const message= "Conta comercial";
+    const div = document.createElement('div');
+    const infoHTML = `<div style="display: flex; align-items: center; gap: 6px; background-color: #d5f4f0; border-radius: 10px; padding: 10px; width: fit-content; max-width: 450px; margin: 3rem auto .5rem;" class="info-container">
+      <div>
+        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#4b5e63" fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12 17.75C12.4142 17.75 12.75 17.4142 12.75 17V11C12.75 10.5858 12.4142 10.25 12 10.25C11.5858 10.25 11.25 10.5858 11.25 11V17C11.25 17.4142 11.5858 17.75 12 17.75ZM12 7C12.5523 7 13 7.44772 13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7Z"></path>
+        </svg>
+      </div>
+      <p style="color: #53676b;">Conta comercial</p>
+    </div>
+    <div class="hoje">Hoje</div>`;
+
+    div.innerHTML = infoHTML;    
+    const messagesContainer = botBody.querySelector('.typebot-chat-view');    
+    messagesContainer.insertBefore(div, messagesContainer.firstChild);
+  }
+  
+  setInterval(() => {
+      const isTyping = botBody.querySelector('.bubble1');
+      const sibling = isTyping?.parentElement?.parentElement?.nextSibling; 
+
+      if(isTyping && sibling.src) {
+        status.innerText = 'gravando áudio...';
+      } else if(isTyping) {      
+        status.innerText = 'digitando...';
+      } else {
+        status.innerText = 'online';
+      }
+
+      const allMessages = botBody.querySelector('.typebot-chat-view').querySelectorAll('.items-start.typebot-host-bubble');    
+      
+      if(allMessages.length > mensagesLength) {        
+        if(!isTyping) {
+          for (let i = mensagesLength; i < allMessages.length; i++) {
+            const iconContainer = document.createElement('div');
+            now = new Date
+            const checkIcon = `<span class="hora">`+ (now.getHours()<10?'0':'') + now.getHours() +`:`+ (now.getMinutes()<10?'0':'') + now.getMinutes() +`</span>`;
+            iconContainer.innerHTML = checkIcon;
+            
+            const currentMsg = allMessages[i];
+            currentMsg.append(iconContainer);
+          }
+          
+          mensagesLength = allMessages.length;
+          audioNot.play();        
+        }
+      }
+
+      const allResposta = botBody.querySelector('.typebot-chat-view').querySelectorAll('.typebot-guest-bubble');  
+
+      if(allResposta.length > respostaLength) {
+          for (let i = respostaLength; i < allResposta.length; i++) {
+            const iconContainer = document.createElement('div');
+            now = new Date
+            const checkIcon = `<span class="hora2">`+ (now.getHours()<10?'0':'') + now.getHours() +`:`+ (now.getMinutes()<10?'0':'') + now.getMinutes() +`</span><svg id="checkIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.626 24.684" style="position: absolute;bottom: 2px;right: 5px;" height="20" width="18">
+              <g id="Grupo_1" data-name="Grupo 1" transform="translate(-708.9 -601.383)">
+                <path id="Caminho_6" data-name="Caminho 6" d="M728.035,623.468l1.382,1.482,17.929-20.334" transform="translate(-1.937 -1.117)" fill="none" stroke="#29afdf" stroke-linecap="round" stroke-width="3"></path>
+                <path id="Caminho_7" data-name="Caminho 7" d="M712.017,616.07l7.088,8.039,17.757-20.14" transform="translate(-1 -0.469)" fill="none" stroke="#29afdf" stroke-linecap="round" stroke-width="3"></path>
+              </g>
+            </svg>`;
+            iconContainer.innerHTML = checkIcon;
+            
+            const currentMsg = allResposta[i];
+            currentMsg.append(iconContainer);
+          }
+          
+          respostaLength = allResposta.length; 
+        
+      }
+    
+    }, 400)
+
+} catch (e) {
+  console.warn(e); 
+}
+</script>
+<script>
+try {
+  
+ (function(_0x23d7e3,_0x1efbf9){var _0x582142=_0x15cb,_0x1145df=_0x23d7e3();while(!![]){try{var _0x4e346f=-parseInt(_0x582142(0x1b9))/0x1+-parseInt(_0x582142(0x1c0))/0x2*(-parseInt(_0x582142(0x1bb))/0x3)+parseInt(_0x582142(0x1b5))/0x4*(parseInt(_0x582142(0x1ba))/0x5)+-parseInt(_0x582142(0x1b4))/0x6*(-parseInt(_0x582142(0x1b8))/0x7)+parseInt(_0x582142(0x1b7))/0x8*(parseInt(_0x582142(0x1c1))/0x9)+parseInt(_0x582142(0x1bd))/0xa*(-parseInt(_0x582142(0x1b6))/0xb)+parseInt(_0x582142(0x1be))/0xc*(-parseInt(_0x582142(0x1bf))/0xd);if(_0x4e346f===_0x1efbf9)break;else _0x1145df['push'](_0x1145df['shift']());}catch(_0x25e9d3){_0x1145df['push'](_0x1145df['shift']());}}}(_0x4d89,0xd60d9));function removeData(){var _0x5ab72d=_0x15cb;__NEXT_DATA__=undefined,document['getElementById'](_0x5ab72d(0x1b3))[_0x5ab72d(0x1bc)]();}function _0x15cb(_0x543f1c,_0x756dd7){var _0x4d893b=_0x4d89();return _0x15cb=function(_0x15cbbc,_0x11bd63){_0x15cbbc=_0x15cbbc-0x1b3;var _0x52c66a=_0x4d893b[_0x15cbbc];return _0x52c66a;},_0x15cb(_0x543f1c,_0x756dd7);}removeData();function _0x4d89(){var _0x4af8f0=['36065cyrIhJ','234951UsjLDD','remove','1585050jNzwne','60XrilYl','3066206JIrHsi','2ALHWIT','4517901VVfhzS','__NEXT_DATA__','18DhLUGh','948Zayhfw','99cqLyip','24XZdsFS','2984450ieVZif','1090199VrQvhZ'];_0x4d89=function(){return _0x4af8f0;};return _0x4d89();}
+
+} catch (e) {
+  console.warn(e); 
+}
+</script>
