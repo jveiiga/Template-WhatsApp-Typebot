@@ -1,1 +1,1 @@
-# Template-WhatsApp
+# Template WhatsApp para Typebot
